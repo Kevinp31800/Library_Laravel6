@@ -67,8 +67,12 @@
 
     <div class="flex-center position-ref full-height">
 
-        <form action="addBook" method="post">
+        <h2>Add a book</h2>
+        <form action="/books" method="post">
+            {{ csrf_field() }}
             <input type="text" name="title" id="add" placeholder="Title">
+            <input type="text" name="author" id="add" placeholder="Author">
+            <input type="text" name="releasedate" id="add" placeholder="ReleaseDate">
             <input type="submit" value="Add new book">
         </form>
 
