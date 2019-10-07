@@ -26,22 +26,21 @@ class BooksController extends Controller
     public function store()
     {
 
-        $books = new Book;
+        $book = new Book;
 
-        $books->title = request('title');
-        $books->author = request('author');
-        $books->releasedate = request('releasedate');
-        $books->save();
+        $book->title = request('title');
+        $book->author = request('author');
+        $book->releasedate = request('releasedate');
+        $book->save();
+
+        return redirect('/books');
 
     }
 
-    public function delete(Book $id)
+    public function delete(Book $book)
     {
+        $book->delete();
 
-        var_dump($id);
-
-        $book = Book::where('id',$id);
-
-        var_dump($book->title);
+        return redirect('/books');
     }
 }

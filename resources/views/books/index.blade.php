@@ -74,7 +74,7 @@
                 <td>{{ $book->title }}</td>
                 <td>{{ $book->author }}</td>
                 <td>{{ $book->releasedate }}</td>
-                <td><a href="{{route('delete', ['id' => $book->id])}}">X</a></td>
+                <td><a href="{{route('delete', ['book' => $book])}}">X</a></td>
             </tr>
         @endforeach
         </table>

@@ -18,7 +18,7 @@ Route::get('/', function () {
  
 Route::get('/books', 'BooksController@index')->name('index');
 
-Route::get('/books/delete/{id}', 'BooksController@delete')->name('delete');
+Route::get('/books/delete/{book}', 'BooksController@delete')->name('delete');
  
 Route::get('books/create', 'BooksController@create');
  
