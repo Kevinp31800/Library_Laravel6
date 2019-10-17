@@ -78,7 +78,7 @@
             </tr>
         @endforeach
         </table>
-
+        <a href="{{route('create')}}">ADD BOOK</a>
     </div>
 
 </body>

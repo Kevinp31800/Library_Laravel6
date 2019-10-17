@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('index');
 });
 
  
@@ -20,7 +20,7 @@ Route::get('/books', 'BooksController@index')->name('index');
 
 Route::get('/books/delete/{book}', 'BooksController@delete')->name('delete');
  
-Route::get('books/create', 'BooksController@create');
+Route::get('books/create', 'BooksController@create')->name('create');
  
 Route::get('books/{id}', 'BooksController@show');
 
